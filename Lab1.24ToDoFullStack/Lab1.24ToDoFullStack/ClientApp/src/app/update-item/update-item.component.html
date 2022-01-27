@@ -1,0 +1,19 @@
+<div id="update{{Id}}">
+<p>Name:</p>
+<input required type="text" id="name{{Id}}" value="{{toDo.name}}" maxlength="25" />
+<p>Description:</p>
+<input required type="text" id="description{{Id}}" value="{{toDo.description}}" maxlength="100"/>
+<p>Assigned to:</p>
+<input type="text" id="assignedTo{{Id}}" value="{{toDo.assignedTo}}" maxlength="35"/>
+<p>Time Needed (minutes):</p>
+<input required type="number" id="duration{{Id}}" value="{{toDo.duration}}"/>
+<p>Completed?</p>
+<div *ngIf="toDo.isCompleted===false">
+<input type="checkbox" id="isCompleted{{Id}}" value="false" />
+</div>
+<div *ngIf="toDo.isCompleted===true">
+  <input type="checkbox" id="isCompleted{{Id}}" checked/>
+
+</div>
+<button (click)="UpdateItem()">Update {{toDo.name}}</button>
+</div>

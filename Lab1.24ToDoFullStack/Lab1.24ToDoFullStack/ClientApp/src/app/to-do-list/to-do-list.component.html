@@ -1,0 +1,20 @@
+<div style="border: 2px solid black" *ngFor="let t of toDos">
+    <div id="display{{t.id}}">
+        
+    <h4>{{t.name}}</h4>
+        <div *ngIf="t.isCompleted===false">
+            <h6>NOT complete yet!  Get it done!</h6>
+        </div>
+
+    </div>
+
+    <app-detail id="detail{{t.id}}" style="display: none" [Id]=t.id></app-detail>
+    <app-update-item id="update{{t.id}}" style="display: none" [Id]=t.id></app-update-item>
+     
+    <button id="detailbutton{{t.id}}" (click)="DetailToDo(t.id)">Details</button>
+
+
+</div>
+
+
+

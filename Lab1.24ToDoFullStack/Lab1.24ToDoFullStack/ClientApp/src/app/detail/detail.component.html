@@ -1,0 +1,8 @@
+<div id="detail{{toDo.id}}">
+  <h4>{{toDo.name}}</h4>
+  <p>Description: {{toDo.description}}</p>
+  <p>Assigned to: {{toDo.assignedTo}}</p>
+  <p>Time to complete: {{toDo.duration}} minutes</p>
+  </div>
+  <app-update-item id="update{{toDo.id}}" style="display:none" [Id]="toDo.id"></app-update-item>
+<button id="updateButton{{toDo.id}}" (click)="UpdateToDo()" >Update {{toDo.name}}</button>
