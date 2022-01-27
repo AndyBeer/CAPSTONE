@@ -12,6 +12,7 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { ToDoListComponent } from './to-do-list/to-do-list.component';
 import { DetailComponent } from './detail/detail.component';
 import { UpdateItemComponent } from './update-item/update-item.component';
+import { CreateItemComponent } from './create-item/create-item.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { UpdateItemComponent } from './update-item/update-item.component';
     ToDoListComponent,
     DetailComponent,
       UpdateItemComponent,
+    CreateItemComponent
 
    ],
   imports: [
@@ -35,7 +37,8 @@ import { UpdateItemComponent } from './update-item/update-item.component';
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'to-do-list', component: ToDoListComponent},
-      { path: 'detail', component: DetailComponent}
+      { path: 'detail', component: DetailComponent},
+      { path: 'create', component: CreateItemComponent}
     ])
   ],
   providers: [],

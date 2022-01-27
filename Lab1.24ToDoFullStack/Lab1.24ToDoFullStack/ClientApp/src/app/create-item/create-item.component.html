@@ -1,1 +1,13 @@
-<p>create-item works!</p>
+<div>
+<h4>Create A New Item</h4>
+    <p>Name:</p>
+    <input required type="text" id="name" maxlength="25" />
+    <p>Description:</p>
+    <input required type="text" id="description" maxlength="100"/>
+    <p>Assigned to:</p>
+    <input type="text" id="assignedTo" maxlength="35"/>
+    <p>Time Needed (minutes):</p>
+    <input required type="number" id="duration"/>
+    <br>
+    <button id="createButton" (click)="CreateToDo()">Create New To Do Item</button>
+    </div>

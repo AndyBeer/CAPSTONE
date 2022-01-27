@@ -30,12 +30,8 @@ toDo?: ToDoItem;
     let duration: number = parseInt((<HTMLInputElement> document.getElementById("duration"+this.Id)).value);
     let checked = (<HTMLInputElement>document.getElementById("isCompleted"+this.Id));
     let isCompleted : boolean = checked.checked;
-    
 
-
-    
-
-    let updatedToDo : ToDoItem = {id: this.Id, name:name, description:description, assignedTo:assignedTo, duration:duration, isCompleted:isCompleted};
+    let updatedToDo : ToDoItem = {id: 0, name:name, description:description, assignedTo:assignedTo, duration:duration, isCompleted:isCompleted};
 
     this.toDoService.UpdateItem(updatedToDo, this.Id).subscribe(
       (response:any)=> {
@@ -43,6 +39,14 @@ toDo?: ToDoItem;
         location.reload();
       }
     )
+  }
+  DeleteItem(id: number){
+    
+      this.toDoService.DeleteItem(id).subscribe(
+      (response:any)=> {console.log("Delete successful for "+id+".");
+      location.reload();
+      }
+      );
   }
 
 }

@@ -26,7 +26,7 @@ export class ToDoService {
   DeleteItem(id: number){
     return this.http.delete(this.url+"/delete/"+id);
   }
-  CreateMovie(newToDo: ToDoItem){//passing in a movie model, that we made in our create-movie component
+  CreateItem(newToDo: ToDoItem){
       
     return this.http.post(this.url+"/create/", newToDo);
   }
